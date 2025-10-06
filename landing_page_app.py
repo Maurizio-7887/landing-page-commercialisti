@@ -42,7 +42,7 @@ except Exception as e:
 # Immagine Banner Principale
 try:
     image = Image.open('consorzio_ids_banner.jpg')
-    st.image(image, use_column_width=True)
+    st.image(image, use_container_width=True)
 except FileNotFoundError:
     st.warning("Immagine 'consorzio_ids_banner.jpg' non trovata. Assicurati che sia nella stessa cartella dello script.")
 
@@ -124,4 +124,5 @@ if submit_button:
             st.error(f"Qualcosa è andato storto durante il salvataggio: {e}")
 
 st.markdown("---")
+
 st.markdown("<p style='text-align: center; color: grey;'>La tua privacy è la nostra priorità. I tuoi dati saranno usati solo per ricontattarti.</p>", unsafe_allow_html=True)
