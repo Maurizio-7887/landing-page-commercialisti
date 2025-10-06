@@ -4,12 +4,20 @@ from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
 from PIL import Image
 
-# --- Configurazione Pagina ---
+# --- Configurazione Pagina E META TAG PER SOCIAL ---
 st.set_page_config(
     page_title="Consorzio IDS | Python per Commercialisti",
     page_icon="🐍",
     layout="centered"
 )
+
+# Inietta i meta tag per l'anteprima di LinkedIn e altri social
+st.markdown("""
+    <meta property="og:title" content="Commercialista: Automatizza la tua Business Intelligence">
+    <meta property="og:description" content="Basta ore perse su Power BI. Ottieni script Python su misura per produrre report chiari e pronti da condividere con i tuoi clienti.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Maurizio-7887/landing-page-commercialisti/main/consorzio_ids_banner.jpg">
+    <meta property="og:url" content="https://ids-commercialisti.streamlit.app">
+    """, unsafe_allow_html=True)
 
 # --- Autenticazione con Google Sheets ---
 # Quando sarai pronto, rimuovi i '#' da questo blocco per attivare la connessione
@@ -126,3 +134,4 @@ if submit_button:
 st.markdown("---")
 
 st.markdown("<p style='text-align: center; color: grey;'>La tua privacy è la nostra priorità. I tuoi dati saranno usati solo per ricontattarti.</p>", unsafe_allow_html=True)
+
